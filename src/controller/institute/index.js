@@ -171,7 +171,16 @@ module.exports = {
             } else if (!subjects) {
                 return resp.status(400).json({ message: "please select subjects first" })
             }
-            //more code imconplete
+
+
+            return resp.status(200).send({
+                status: true,
+                message:"all thing done now add post method and save data in db",
+                body: {
+                    instituteType, board, medium, classes, standard, subjects
+                },
+                nexturl: `${base_url}/register use post method`
+            })
 
 
         } catch (error) {
