@@ -1,9 +1,8 @@
 var express = require('express');
+const instituteRouter = require('./instituteRoute');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+/* GET all routes. */
+router.use('/select', instituteRouter)
 
 module.exports = router;
