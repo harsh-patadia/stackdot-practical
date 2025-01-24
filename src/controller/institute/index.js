@@ -158,7 +158,6 @@ module.exports = {
     savedata: async function (req, resp) {
         try {
             const { instituteType, board, medium, classes, standard, subjects } = req.query;
-
             if (!instituteType) {
                 return resp.status(400).json({ message: "please select institute first" })
             } else if (!board) {
@@ -169,9 +168,10 @@ module.exports = {
                 return resp.status(400).json({ message: "please select class first" })
             } else if (!standard) {
                 return resp.status(400).json({ message: "please select standard first" })
-            } else if (!subject){
+            } else if (!subjects) {
                 return resp.status(400).json({ message: "please select subjects first" })
             }
+            //more code imconplete
 
 
         } catch (error) {
