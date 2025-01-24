@@ -138,7 +138,10 @@ module.exports = {
             const subjectSelect = await subjectModel.aggregate([
                 {
                     $match: {
-                        name: classes
+                        name: classes,
+                        allow_standards: {
+                            $in: [standard]
+                        }
                     }
                 }
             ])
@@ -175,7 +178,7 @@ module.exports = {
 
             return resp.status(200).send({
                 status: true,
-                message:"all thing done now add post method and save data in db",
+                message: "all thing done now add post method and save data in db",
                 body: {
                     instituteType, board, medium, classes, standard, subjects
                 },
