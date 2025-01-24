@@ -22,3 +22,8 @@ data require in Body
 `classes`,
 `standard`,
 `subjects`
+
+
+### Database url
+
+- ***mongodb+srv://harshsoni:harshsoni@stackdottask.92r4j.mongodb.net/?retryWrites=true&w=majority&appName=stackdottask***
